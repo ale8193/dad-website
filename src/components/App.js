@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import '../style/css/app.css';
 import SavingCalculator from './tools/SavingCalculator';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { routes } from '../routes';
 import { getScreenType, BREAKPOINTS } from '../screenUtils';
 import Navbar from './navigation/Navbar';
+import Sidebar from './navigation/Sidebar';
+import HeroBanner from './banners/HeroBanner';
+import ServiceBanner from './banners/ServiceBanner';
 
 const PRICE = {
     met: 0.98,
@@ -18,7 +22,8 @@ class App extends Component {
             currentPage: routes.home.code,
             currentBlock: routes.home.code,
             screenType: getScreenType(),
-            scrollDirection: null // 1 == TOP | 0 == DOWN
+            scrollDirection: null, // 1 == TOP | 0 == DOWN
+            sideNavOpen: false
         };
         this.scrollPos = 0;
     }
@@ -45,12 +50,12 @@ class App extends Component {
         this.scrollPos = document.body.getBoundingClientRect().top;
         this.setState({
             scrollDirection: direction
-        })
+        });
     };
 
     handleBlockChange = (e, block) => {
         e.preventDefault();
-        this.setState({ currentBlock: block });
+        this.setState({ currentBlock: block, sideNavOpen: false });
         const jQuery = window.jQuery;
         const target = jQuery(`#${block}`);
         if (target.length) {
@@ -61,6 +66,13 @@ class App extends Component {
                 1000
             );
         }
+    };
+
+    toggleSidenav = () => {
+        const { sideNavOpen } = this.state;
+        this.setState({
+            sideNavOpen: !sideNavOpen
+        });
     };
 
     handlePageChange = (e, page) => {
@@ -76,27 +88,33 @@ class App extends Component {
     };
 
     render() {
-        const { currentBlock, currentPage, scrollDirection } = this.state;
+        const { currentBlock, currentPage, scrollDirection, sideNavOpen } = this.state;
         return (
-            <div id="home" className="app-wrapper">
-                <Navbar current={currentBlock} handleLinkClick={this.handleBlockChange} scrollDirection={scrollDirection} />
-                <div style={{ height: '1000px' }} />
-                <div id="about" style={{ height: '1000px' }} className="container py-5">
-                    <h2 className="text-primary">CHI SIAMO</h2>
+            <ParallaxProvider>
+                <div id="home" className="app-wrapper">
+                    <Navbar
+                        current={currentBlock}
+                        handleLinkClick={this.handleBlockChange}
+                        scrollDirection={scrollDirection}
+                        toggleSidenav={this.toggleSidenav}
+                    />
+                    <Sidebar current={currentBlock} handleLinkClick={this.handleBlockChange} sideNavOpen={sideNavOpen} toggleSidenav={this.toggleSidenav} />
+                    <HeroBanner handleLinkClick={this.handleBlockChange} />
+                    <ServiceBanner />
+                    <div id="metano" className="container py-5">
+                        <SavingCalculator type="metano" fuelPrice={PRICE['bez']} savingPrice={PRICE['met']} unit="kilo" />
+                    </div>
+                    <div id="gpl" className="container py-5">
+                        <SavingCalculator type="gpl" fuelPrice={PRICE['bez']} savingPrice={PRICE['gpl']} unit="litro" />
+                    </div>
+                    <div id="where" style={{ height: '1000px' }} className="container py-5">
+                        <h2 className="text-primary">DOVE SIAMO</h2>
+                    </div>
+                    <div id="contact" style={{ height: '1000px' }} className="container py-5">
+                        <h2 className="text-primary">CONTATTI</h2>
+                    </div>
                 </div>
-                <div id="metano" className="container py-5">
-                    <SavingCalculator type="metano" fuelPrice={PRICE['bez']} savingPrice={PRICE['met']} unit="kilo" />
-                </div>
-                <div id="gpl" className="container py-5">
-                    <SavingCalculator type="gpl" fuelPrice={PRICE['bez']} savingPrice={PRICE['gpl']} unit="litro" />
-                </div>
-                <div id="service" style={{ height: '1000px' }} className="container py-5">
-                    <h2 className="text-primary">SERVIZI</h2>
-                </div>
-                <div id="contact" style={{ height: '1000px' }} className="container py-5">
-                    <h2 className="text-primary">CONTATTI</h2>
-                </div>
-            </div>
+            </ParallaxProvider>
         );
     }
 }

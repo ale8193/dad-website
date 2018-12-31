@@ -1,0 +1,66 @@
+
+.service-section {
+    position: relative;
+
+    &::before {
+        //opacity: 0.4;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $white;
+    }
+
+    .section-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.services-list {
+    padding-left: 0;
+    
+    li {
+        list-style: none;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
+    // Mobile
+    .service-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    // Mobile
+    .service-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    // Tablet
+    .service-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    // Desktop
+    .service-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}

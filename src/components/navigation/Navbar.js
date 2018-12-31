@@ -4,7 +4,7 @@ import logo from '../../images/logo.png';
 
 export default class Navbar extends Component {
     render() {
-        const { current, handleLinkClick, scrollDirection } = this.props;
+        const { current, handleLinkClick, scrollDirection, toggleSidenav } = this.props;
         let navItemLength = 100 / Object.keys(routes).length;
         const navItems = Object.keys(routes).map((code, index) =>
             code === 'home' ? (
@@ -39,7 +39,7 @@ export default class Navbar extends Component {
         return (
             <nav className={navbarClass} id="app-navbar">
                 <div className="mobile-navbar">
-                    <span className="toggle-icon">
+                    <span className="toggle-icon" onClick={toggleSidenav}>
                         <i className="fas fa-bars" />
                     </span>
                     <div className="text-center">

@@ -6,10 +6,10 @@ export const routes = {
         title: 'Homepage',
         page: 'home'
     },
-    about: {
-        label: 'Chi siamo',
-        code: 'about',
-        title: 'Chi siamo',
+    service: {
+        label: 'Servizi',
+        code: 'service',
+        title: 'Servizi',
         page: 'home'
     },
     metano: {
@@ -24,16 +24,16 @@ export const routes = {
         title: 'GPL',
         page: 'home'
     },
-    service: {
-        label: 'Servizi',
-        code: 'service',
-        title: 'Servizi',
+    where: {
+        label: 'Dove siamo',
+        code: 'where',
+        title: 'Dove siamo',
         page: 'home'
     },
     contact: {
-        label: 'Contact',
+        label: 'Contatti',
         code: 'contact',
-        title: 'Contact me',
+        title: 'Contattami',
         page: 'home'
     },
 }

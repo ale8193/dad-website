@@ -1,0 +1,62 @@
+
+.hero-section {
+    position: relative;
+
+    &::before {
+        opacity: 0.4;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url('/images/banner-0.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .section-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
+    // Mobile
+    .hero-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    // Mobile
+    .hero-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    // Tablet
+    .hero-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    // Desktop
+    .hero-section {
+        .section-wrapper {
+            height: 100vh;
+        }
+    }
+}
