@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $gray-800;
+}
+
+.font-small {
+    font-size: 0.875rem;
+}
+
+.font-extra-small {
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
+    // Mobile
+
+    body {
+        margin-top: $navbar-height-sm;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    // Mobile
+
+    body {
+        margin-top: $navbar-height-sm;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    // Tablet
+    body {
+        margin-top: $navbar-height-md;
+    }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    // Desktop
+    body {
+        margin-top: $navbar-height;
+    }
+}

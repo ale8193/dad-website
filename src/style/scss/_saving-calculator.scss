@@ -1,0 +1,47 @@
+.saving-box {
+    .result-box {
+        max-height: 0;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-in;
+        opacity: 0;
+
+        &.show {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .saving-text {
+        padding: 0.25rem 1rem;
+        font-weight: bold;
+    }
+}
+
+.price-box {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .head {
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+    }
+
+    .head, .info, .result-line {
+        padding: 0.25rem 1rem;
+        
+    }
+
+    .result-line {
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+
+    &.primary .result-line {
+        background-color: map-get($theme-colors, 'primary');
+        color: $white;
+    }
+
+    &.secondary .result-line {
+        background-color: map-get($theme-colors, 'secondary');
+        color: $white;
+    }
+}
