@@ -29,6 +29,33 @@
     }
 }
 
+.service-primary {
+    border: 1px solid $primary;
+    background-color: $primary;
+    border-radius: 50%;
+    color: $white;
+}
+
+.service-outline-primary {
+    border: 1px solid $primary;
+    background-color: transparent;
+    border-radius: 50%;
+    color: inherit;
+}
+
+.service-outline-primary, .service-primary {
+    width: 300px;
+    height: 300px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+    .service-header {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
 @media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
     // Mobile
     .service-section {

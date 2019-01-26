@@ -8,6 +8,7 @@ import Navbar from './navigation/Navbar';
 import Sidebar from './navigation/Sidebar';
 import HeroBanner from './banners/HeroBanner';
 import ServiceBanner from './banners/ServiceBanner';
+import DiscoverArrow from './common/DiscoverArrow';
 
 const PRICE = {
     met: 0.98,
@@ -100,6 +101,7 @@ class App extends Component {
                     />
                     <Sidebar current={currentBlock} handleLinkClick={this.handleBlockChange} sideNavOpen={sideNavOpen} toggleSidenav={this.toggleSidenav} />
                     <HeroBanner handleLinkClick={this.handleBlockChange} />
+                    <DiscoverArrow handleLinkClick={this.handleBlockChange} />
                     <ServiceBanner />
                     <div id="metano" className="container py-5">
                         <SavingCalculator type="metano" fuelPrice={PRICE['bez']} savingPrice={PRICE['met']} unit="kilo" />

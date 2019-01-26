@@ -12,6 +12,16 @@ body {
     font-size: 0.75rem;
 }
 
+.discover-arrow {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+    top: 85vh;
+    z-index: 100;
+}
+
 @media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
     // Mobile
 
