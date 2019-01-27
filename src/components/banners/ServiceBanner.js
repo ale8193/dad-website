@@ -7,22 +7,26 @@ export default class ServiceBanner extends Component {
     render() {
         const services = getAllServices();
         return (
-            <Parallax className="section service-section" offsetYMax={20} offsetYMin={-20} slowerScrollRate tag="section">
+            <section className="section service-section">
                 <div className="section-wrapper">
                     <div className="section-content">
                         <div className="text-center mb-5">
-                            <h2 id="service">Servizi</h2>
+                            <h2 id="service" className="section-header">Servizi</h2>
                         </div>
-                        <div className="row">
-                            {services.map(service => (
-                                <div className="col-12 col-md-6 col-lg-4">
-                                    <ServiceItem service={service} />
+                        <div className="row justify-content-center">
+                            <div className="col-12 col-md-10 col-lg-9 col-xl-8">
+                                <div className="row justify-content-start">
+                                    {services.map(service => (
+                                        <div key={service.id} className="col-12 col-md-6 col-lg-4">
+                                            <ServiceItem service={service} />
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </Parallax>
+            </section>
         );
     }
 }

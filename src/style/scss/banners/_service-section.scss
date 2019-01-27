@@ -21,38 +21,43 @@
     }
 }
 
-.services-list {
-    padding-left: 0;
-    
-    li {
-        list-style: none;
+.service-item {
+    padding: 20px;
+    margin-bottom: 32px;
+
+    .service-number {
+        font-weight: 800;
+        font-size: 4rem;
+        letter-spacing: 5px;
     }
-}
 
-.service-primary {
-    border: 1px solid $primary;
-    background-color: $primary;
-    border-radius: 50%;
-    color: $white;
-}
+    .service-head {
+        font-weight: 300;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        letter-spacing: 2px;
+    }
 
-.service-outline-primary {
-    border: 1px solid $primary;
-    background-color: transparent;
-    border-radius: 50%;
-    color: inherit;
-}
+    .services-list {
+        padding-left: 0;
+        
+        li {
+            list-style: none;
 
-.service-outline-primary, .service-primary {
-    width: 300px;
-    height: 300px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
+            .item-content {
+                display: flex;
 
-    .service-header {
-        text-align: center;
-        margin-bottom: 1rem;
+                .item-icon {
+                    width: 9%;
+                    padding-top: 4px;
+                }
+
+                .item-value {
+                    width: 91%;
+                }
+            }
+        }
     }
 }
 
@@ -60,7 +65,18 @@
     // Mobile
     .service-section {
         .section-wrapper {
-            height: 100vh;
+            min-height: 100vh;
+        }
+    }
+    .service-item {
+        .service-number {
+            text-align: center
+        }
+        .service-head {
+            text-align: center;
+        }
+        .services-list {
+            padding: 0 30px;
         }
     }
 }
@@ -69,7 +85,19 @@
     // Mobile
     .service-section {
         .section-wrapper {
-            height: 100vh;
+            min-height: 100vh;
+        }
+    }
+
+    .service-item {
+        .service-number {
+            text-align: center
+        }
+        .service-head {
+            text-align: center;
+        }
+        .services-list {
+            padding: 0 30px;
         }
     }
 }
@@ -78,7 +106,18 @@
     // Tablet
     .service-section {
         .section-wrapper {
-            height: 100vh;
+            min-height: 100vh;
+        }
+    }
+    .service-item {
+        .service-number {
+            text-align: center
+        }
+        .service-head {
+            text-align: center;
+        }
+        .services-list {
+            padding: 0 30px;
         }
     }
 }
@@ -87,7 +126,18 @@
     // Desktop
     .service-section {
         .section-wrapper {
-            height: 100vh;
+            min-height: 120vh;
+        }
+    }
+    .service-item {
+        .service-number {
+            text-align: center
+        }
+        .service-head {
+            text-align: center;
+        }
+        .services-list {
+            padding: 0 30px;
         }
     }
 }

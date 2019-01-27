@@ -57,6 +57,58 @@ export const getAllServices = () => {
                     item: 'Revisione bombole'
                 },
             ]
+        },
+        {
+            id: 3,
+            code: 'prova1',
+            name: 'Prova 1',
+            description: '',
+            subServices: [
+                {
+                    id: 0,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 1,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 2,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 2,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 2,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 2,
+                    item: 'Prova servizio'
+                },
+            ]
+        },
+        {
+            id: 4,
+            code: 'prova2',
+            name: 'Prova 2',
+            description: '',
+            subServices: [
+                {
+                    id: 0,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 1,
+                    item: 'Prova servizio'
+                },
+                {
+                    id: 2,
+                    item: 'Prova servizio'
+                },
+            ]
         }
     ]
 }

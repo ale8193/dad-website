@@ -9750,6 +9750,12 @@ body {
     right: 45px;
     font-size: 40px; } }
 
+.section-header {
+  margin: 5rem 0 3rem 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 5px; }
+
 .hero-section {
   position: relative; }
   .hero-section::before {
@@ -9803,45 +9809,67 @@ body {
     justify-content: center;
     align-items: center; }
 
-.services-list {
-  padding-left: 0; }
-  .services-list li {
-    list-style: none; }
-
-.service-primary {
-  border: 1px solid #0390BF;
-  background-color: #0390BF;
-  border-radius: 50%;
-  color: #fff; }
-
-.service-outline-primary {
-  border: 1px solid #0390BF;
-  background-color: transparent;
-  border-radius: 50%;
-  color: inherit; }
-
-.service-outline-primary, .service-primary {
-  width: 300px;
-  height: 300px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center; }
-  .service-outline-primary .service-header, .service-primary .service-header {
-    text-align: center;
-    margin-bottom: 1rem; }
+.service-item {
+  padding: 20px;
+  margin-bottom: 32px; }
+  .service-item .service-number {
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 5px; }
+  .service-item .service-head {
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    letter-spacing: 2px; }
+  .service-item .services-list {
+    padding-left: 0; }
+    .service-item .services-list li {
+      list-style: none; }
+      .service-item .services-list li .item-content {
+        display: flex; }
+        .service-item .services-list li .item-content .item-icon {
+          width: 9%;
+          padding-top: 4px; }
+        .service-item .services-list li .item-content .item-value {
+          width: 91%; }
 
 @media screen and (min-width: 0) {
   .service-section .section-wrapper {
-    height: 100vh; } }
+    min-height: 100vh; }
+  .service-item .service-number {
+    text-align: center; }
+  .service-item .service-head {
+    text-align: center; }
+  .service-item .services-list {
+    padding: 0 30px; } }
 
 @media screen and (min-width: 576px) {
   .service-section .section-wrapper {
-    height: 100vh; } }
+    min-height: 100vh; }
+  .service-item .service-number {
+    text-align: center; }
+  .service-item .service-head {
+    text-align: center; }
+  .service-item .services-list {
+    padding: 0 30px; } }
 
 @media screen and (min-width: 768px) {
   .service-section .section-wrapper {
-    height: 100vh; } }
+    min-height: 100vh; }
+  .service-item .service-number {
+    text-align: center; }
+  .service-item .service-head {
+    text-align: center; }
+  .service-item .services-list {
+    padding: 0 30px; } }
 
 @media screen and (min-width: 992px) {
   .service-section .section-wrapper {
-    height: 100vh; } }
+    min-height: 120vh; }
+  .service-item .service-number {
+    text-align: center; }
+  .service-item .service-head {
+    text-align: center; }
+  .service-item .services-list {
+    padding: 0 30px; } }
