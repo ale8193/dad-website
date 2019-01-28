@@ -1,7 +1,17 @@
 
-.section-header {
-    margin: 5rem 0 3rem 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 5px;
+.section {
+
+    .section-header {
+        margin: 5rem 0 3rem 0;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+    
+    .section-header-lateral {
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 5px;
+        margin: 3rem;
+    }
 }

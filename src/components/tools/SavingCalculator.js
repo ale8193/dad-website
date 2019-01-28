@@ -59,6 +59,27 @@ export default class SavingCalculator extends Component {
         }
     };
 
+    handleReset = event => {
+        event.preventDefault();
+        this.setState({
+            form: {
+                kml: {
+                    value: 0,
+                    error: false
+                },
+                kmYear: {
+                    value: 0,
+                    error: false
+                }
+            },
+            showResult: false,
+            costFuel: 0,
+            costSaving: 0,
+            saving: 0,
+            savingPerc: 0
+        })
+    }
+
     handleChange = (event, name) => {
         const { form } = this.state;
         form[name].value = event.target.value;
@@ -81,10 +102,10 @@ export default class SavingCalculator extends Component {
                     </h6>
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group row my-2">
-                            <label htmlFor="kml" className="col-sm-8 col-md-9 font-small col-form-label">
+                            <label htmlFor="kml" className="col-sm-8 col-md-8 col-lg-9 font-small col-form-label">
                                 Quanti kilometri fai con un litro di benzina? (km/l)
                             </label>
-                            <div className="col-sm-4 col-md-3">
+                            <div className="col-sm-4 col-md-4 col-lg-3">
                                 <input
                                     type="number"
                                     className={form.kml.error ? 'form-control form-control-sm is-invalid' : 'form-control form-control-sm'}
@@ -92,14 +113,14 @@ export default class SavingCalculator extends Component {
                                     value={form.kml.value}
                                     onChange={e => this.handleChange(e, 'kml')}
                                 />
-                                <div className="invalid-tooltip">{form.kml.error}</div>
+                                <div className="invalid-feedback">{form.kml.error}</div>
                             </div>
                         </div>
                         <div className="form-group row my-2">
-                            <label htmlFor="kmYear" className="col-sm-8 col-md-9 font-small col-form-label">
+                            <label htmlFor="kmYear" className="col-sm-8 col-md-8 col-lg-9 font-small col-form-label">
                                 Quanti kilometri fai mediamente all'anno?
                             </label>
-                            <div className="col-sm-4 col-md-3">
+                            <div className="col-sm-4 col-md-4 col-lg-3">
                                 <input
                                     type="number"
                                     className={form.kmYear.error ? 'form-control form-control-sm is-invalid' : 'form-control form-control-sm'}
@@ -107,10 +128,13 @@ export default class SavingCalculator extends Component {
                                     value={form.kmYear.value}
                                     onChange={e => this.handleChange(e, 'kmYear')}
                                 />
-                                <div className="invalid-tooltip">{form.kmYear.error}</div>
+                                <div className="invalid-feedback">{form.kmYear.error}</div>
                             </div>
                         </div>
                         <div className="text-right">
+                            <button type="reset" className="card-link btn btn-outline-secondary" onClick={this.handleReset}>
+                                Reset
+                            </button>
                             <button type="submit" className="card-link btn btn-outline-primary">
                                 Scopri
                             </button>

@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import '../style/css/app.css';
-import SavingCalculator from './tools/SavingCalculator';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { routes } from '../routes';
-import { getScreenType, BREAKPOINTS } from '../screenUtils';
+import { getScreenType } from '../screenUtils';
 import Navbar from './navigation/Navbar';
 import Sidebar from './navigation/Sidebar';
 import HeroBanner from './banners/HeroBanner';
 import ServiceBanner from './banners/ServiceBanner';
 import DiscoverArrow from './common/DiscoverArrow';
-
-const PRICE = {
-    met: 0.98,
-    gpl: 0.67,
-    bez: 1.64
-};
+import MetanoBanner from './banners/MetanoBanner';
+import GplBanner from './banners/GplBanner';
 
 class App extends Component {
     constructor(props) {
@@ -89,7 +84,7 @@ class App extends Component {
     };
 
     render() {
-        const { currentBlock, currentPage, scrollDirection, sideNavOpen } = this.state;
+        const { currentBlock, scrollDirection, sideNavOpen } = this.state;
         return (
             <ParallaxProvider>
                 <div id="home" className="app-wrapper">
@@ -103,12 +98,8 @@ class App extends Component {
                     <HeroBanner handleLinkClick={this.handleBlockChange} />
                     <DiscoverArrow handleLinkClick={this.handleBlockChange} />
                     <ServiceBanner />
-                    <div id="metano" className="container py-5">
-                        <SavingCalculator type="metano" fuelPrice={PRICE['bez']} savingPrice={PRICE['met']} unit="kilo" />
-                    </div>
-                    <div id="gpl" className="container py-5">
-                        <SavingCalculator type="gpl" fuelPrice={PRICE['bez']} savingPrice={PRICE['gpl']} unit="litro" />
-                    </div>
+                    <MetanoBanner />
+                    <GplBanner />
                     <div id="where" style={{ height: '1000px' }} className="container py-5">
                         <h2 className="text-primary">DOVE SIAMO</h2>
                     </div>
