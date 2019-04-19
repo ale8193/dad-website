@@ -12,10 +12,10 @@ export default function GplBanner() {
                         <div className="row">
                             <div className="col-12 col-md-12 col-lg-6 margin-md-b-3rem">
                                 <div className="text-left">
-                                    <h2 className="section-header-lateral text-white">GPL</h2>
+                                    <h2 className="section-header-lateral text-primary">GPL</h2>
                                 </div>
                                 <div className="sub-section-content text-white">
-                                    <h4 className="sub-header">Che cos'&egrave; il GPL?</h4>
+                                    <h4 className="sub-header text-secondary">Che cos'&egrave; il GPL?</h4>
                                     <p className="content-value">
                                         <span className="font-weight-bold font-italic mr-1">"</span>
                                         Il GPL (Gas di petrolio liquefatto) è un derivato del petrolio, e quindi garantisce una combustione più simile a quelle
@@ -24,7 +24,7 @@ export default function GplBanner() {
                                         benzina.
                                         <span className="font-weight-bold font-italic ml-1">"</span>
                                     </p>
-                                    <h4 className="sub-header">Ma non solo</h4>
+                                    <h4 className="sub-header text-secondary">Ma non solo</h4>
                                     <p className="content-value">
                                         <span className="font-weight-bold font-italic mr-1">"</span>
                                         un’auto a GPL permette di <b>ottimizzare le spese</b> e di diminuire il consumo di carburante. Infatti, un pieno di GPL

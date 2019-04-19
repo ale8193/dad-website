@@ -10,6 +10,7 @@ import ServiceBanner from './banners/ServiceBanner';
 import DiscoverArrow from './common/DiscoverArrow';
 import MetanoBanner from './banners/MetanoBanner';
 import GplBanner from './banners/GplBanner';
+import WhereBanner from "./banners/WhereBanner";
 
 class App extends Component {
     constructor(props) {
@@ -100,9 +101,7 @@ class App extends Component {
                     <ServiceBanner />
                     <MetanoBanner />
                     <GplBanner />
-                    <div id="where" style={{ height: '1000px' }} className="container py-5">
-                        <h2 className="text-primary">DOVE SIAMO</h2>
-                    </div>
+                    <WhereBanner />
                     <div id="contact" style={{ height: '1000px' }} className="container py-5">
                         <h2 className="text-primary">CONTATTI</h2>
                     </div>

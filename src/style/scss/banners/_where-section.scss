@@ -1,0 +1,210 @@
+
+.where-section {
+
+
+  .content {
+
+    .opening-time {
+      margin-top: 30px;
+
+      .day-wrapper {
+        width: 50px;
+        height: 50px;
+        text-transform: uppercase;
+        display: inline-block;
+        background-color: $green;
+        line-height: 52px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .day-opening-times {
+        display: inline-block;
+        font-size: 0.9rem;
+
+        .day-close {
+          font-size: 0.9rem;
+          line-height: 52px;
+        }
+
+        .one-our {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'xs')) {
+  // Mobile
+  .where-section {
+    margin-top: 80px;
+
+    .section-content, .section-content .container-fluid {
+      padding: 0;
+    }
+
+    .content {
+      .opening-time {
+        margin-top: 20px;
+        padding: 0 15px;
+      }
+
+      .section-header {
+        margin: 2rem 0 1rem 0;
+      }
+
+      .sub-section-header {
+        margin: 1.5rem 0 0.8rem 0;
+      }
+
+      .where-info {
+        font-weight: 100;
+        font-style: italic;
+        font-size: 0.9rem;
+
+        .address {
+          margin-bottom: 8px;
+        }
+
+        .contacts {
+          margin-top: 10px;
+
+          > p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+  // Mobile
+  .where-section {
+    margin-top: 80px;
+
+    .section-content, .section-content .container-fluid {
+      padding: 0;
+    }
+
+    .content {
+      .opening-time {
+        margin-top: 20px;
+        padding: 0 15px;
+      }
+
+      .section-header {
+        margin: 2rem 0 1rem 0;
+      }
+
+      .sub-section-header {
+        margin: 1.5rem 0 0.8rem 0;
+      }
+
+      .where-info {
+        font-weight: 100;
+        font-style: italic;
+        font-size: 0.9rem;
+
+        .address {
+          margin-bottom: 8px;
+        }
+
+        .contacts {
+          margin-top: 10px;
+
+          > p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+  // Tablet
+  .where-section {
+    margin-top: 80px;
+
+    .section-content {
+      padding: 0 3rem;
+    }
+
+    .content {
+      .opening-time {
+        padding: 0;
+      }
+
+      .section-header {
+        margin: 3rem 0 1.5rem 0;
+      }
+
+      .sub-section-header {
+        margin: 2rem 0 1.5rem 0;
+      }
+
+      .where-info {
+        font-weight: 100;
+        font-style: italic;
+        font-size: 0.9rem;
+
+        .address {
+          margin-bottom: 8px;
+        }
+
+        .contacts {
+          margin-top: 15px;
+
+          > p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+  // Desktop
+  .where-section {
+    margin-top: 150px;
+
+    .section-content {
+      padding: 0 3rem;
+    }
+
+    .content {
+      .opening-time {
+        padding: 0;
+      }
+      
+      .section-header {
+        margin: 3rem 0 1.5rem 0;
+      }
+
+      .sub-section-header {
+        margin: 2rem 0 1.5rem 0;
+      }
+
+      .where-info {
+        font-weight: 100;
+        font-style: italic;
+        font-size: 0.9rem;
+
+        .address {
+          margin-bottom: 8px;
+        }
+
+        .contacts {
+          margin-top: 15px;
+
+          > p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
