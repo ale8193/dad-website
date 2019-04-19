@@ -9596,6 +9596,32 @@ body {
     background-color: #B3DB11;
     color: #fff; }
 
+.map-container {
+  width: 100%;
+  position: relative; }
+  .map-container .info-window {
+    margin: 20px 0 20px 20px; }
+    .map-container .info-window .contacts {
+      margin-top: 20px; }
+      .map-container .info-window .contacts > p {
+        margin-bottom: 10px; }
+
+@media screen and (min-width: 0) {
+  .map-container {
+    min-height: 65vh; } }
+
+@media screen and (min-width: 576px) {
+  .map-container {
+    min-height: 65vh; } }
+
+@media screen and (min-width: 768px) {
+  .map-container {
+    min-height: 70vh; } }
+
+@media screen and (min-width: 992px) {
+  .map-container {
+    min-height: 100vh; } }
+
 .custom-navbar {
   overflow: hidden;
   background-color: #fff;
@@ -10003,3 +10029,113 @@ body {
     height: 100%;
     min-height: 450px;
     max-height: 550px; } }
+
+.where-section .content .opening-time {
+  margin-top: 30px; }
+  .where-section .content .opening-time .day-wrapper {
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #B3DB11;
+    line-height: 52px;
+    text-align: center;
+    font-size: 0.9rem; }
+  .where-section .content .opening-time .day-opening-times {
+    display: inline-block;
+    font-size: 0.9rem; }
+    .where-section .content .opening-time .day-opening-times .day-close {
+      font-size: 0.9rem;
+      line-height: 52px; }
+    .where-section .content .opening-time .day-opening-times .one-our {
+      margin-bottom: 5px; }
+
+@media screen and (min-width: 0) {
+  .where-section {
+    margin-top: 80px; }
+    .where-section .section-content, .where-section .section-content .container-fluid {
+      padding: 0; }
+    .where-section .content .opening-time {
+      margin-top: 20px;
+      padding: 0 15px; }
+    .where-section .content .section-header {
+      margin: 2rem 0 1rem 0; }
+    .where-section .content .sub-section-header {
+      margin: 1.5rem 0 0.8rem 0; }
+    .where-section .content .where-info {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 0.9rem; }
+      .where-section .content .where-info .address {
+        margin-bottom: 8px; }
+      .where-section .content .where-info .contacts {
+        margin-top: 10px; }
+        .where-section .content .where-info .contacts > p {
+          margin-bottom: 5px; } }
+
+@media screen and (min-width: 576px) {
+  .where-section {
+    margin-top: 80px; }
+    .where-section .section-content, .where-section .section-content .container-fluid {
+      padding: 0; }
+    .where-section .content .opening-time {
+      margin-top: 20px;
+      padding: 0 15px; }
+    .where-section .content .section-header {
+      margin: 2rem 0 1rem 0; }
+    .where-section .content .sub-section-header {
+      margin: 1.5rem 0 0.8rem 0; }
+    .where-section .content .where-info {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 0.9rem; }
+      .where-section .content .where-info .address {
+        margin-bottom: 8px; }
+      .where-section .content .where-info .contacts {
+        margin-top: 10px; }
+        .where-section .content .where-info .contacts > p {
+          margin-bottom: 5px; } }
+
+@media screen and (min-width: 768px) {
+  .where-section {
+    margin-top: 80px; }
+    .where-section .section-content {
+      padding: 0 3rem; }
+    .where-section .content .opening-time {
+      padding: 0; }
+    .where-section .content .section-header {
+      margin: 3rem 0 1.5rem 0; }
+    .where-section .content .sub-section-header {
+      margin: 2rem 0 1.5rem 0; }
+    .where-section .content .where-info {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 0.9rem; }
+      .where-section .content .where-info .address {
+        margin-bottom: 8px; }
+      .where-section .content .where-info .contacts {
+        margin-top: 15px; }
+        .where-section .content .where-info .contacts > p {
+          margin-bottom: 5px; } }
+
+@media screen and (min-width: 992px) {
+  .where-section {
+    margin-top: 150px; }
+    .where-section .section-content {
+      padding: 0 3rem; }
+    .where-section .content .opening-time {
+      padding: 0; }
+    .where-section .content .section-header {
+      margin: 3rem 0 1.5rem 0; }
+    .where-section .content .sub-section-header {
+      margin: 2rem 0 1.5rem 0; }
+    .where-section .content .where-info {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 0.9rem; }
+      .where-section .content .where-info .address {
+        margin-bottom: 8px; }
+      .where-section .content .where-info .contacts {
+        margin-top: 15px; }
+        .where-section .content .where-info .contacts > p {
+          margin-bottom: 5px; } }

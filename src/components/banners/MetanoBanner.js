@@ -22,10 +22,10 @@ export default function MetanoBanner() {
                             </div>
                             <div className="col-12 col-md-12 col-lg-6">
                                 <div className="text-left">
-                                    <h2 className="section-header-lateral text-white">Metano</h2>
+                                    <h2 className="section-header-lateral text-primary">Metano</h2>
                                 </div>
                                 <div className="sub-section-content text-white">
-                                    <h4 className="sub-header">Che cos'&egrave; il metano?</h4>
+                                    <h4 className="sub-header text-secondary">Che cos'&egrave; il metano?</h4>
 
                                     <p className="content-value">
                                         <span className="font-weight-bold font-italic mr-1">"</span>
@@ -37,7 +37,7 @@ export default function MetanoBanner() {
                                         è costituito dalla possibilità di circolare all’interno delle ZTL.
                                         <span className="font-weight-bold font-italic ml-1">"</span>
                                     </p>
-                                    <h4 className="sub-header">Sfatiamo falsi miti!</h4>
+                                    <h4 className="sub-header text-secondary">Sfatiamo falsi miti!</h4>
                                     <p className="content-value">
                                         <span className="font-weight-bold font-italic mr-1">"</span>
                                         Quando si guida un’auto a metano, la sensazione di guida è ormai identica a quella che si prova su un veicolo diesel o

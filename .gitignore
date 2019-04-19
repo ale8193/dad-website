@@ -24,4 +24,4 @@ yarn-error.log*
 
 # idea folder
 .idea
-/src/config.js
+/src/config.json
