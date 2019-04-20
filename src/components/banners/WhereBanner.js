@@ -31,7 +31,18 @@ export default function WhereBanner() {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 col-md-12 col-lg-9">
-                                <Map />
+                                {/*<Map />*/}
+                                <div style={{
+                                    width: '100%',
+                                    height: '100vh',
+                                    backgroundColor: '#e3e3e3',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}
+                                >
+                                    <h3>Map Here</h3>
+                                </div>
                             </div>
                             <div className="col-12 col-md-12 col-lg-3">
                                 <div className="content text-white">
