@@ -9598,6 +9598,7 @@ body {
 
 .map-container {
   width: 100%;
+  height: 100%;
   position: relative; }
   .map-container .marker {
     transform: translate(-50%, -50%);
@@ -9646,25 +9647,25 @@ body {
 
 @media screen and (min-width: 0) {
   .map-container {
-    min-height: 65vh; }
+    max-height: 65vh; }
     .map-container .marker .logo {
       width: 60px; } }
 
 @media screen and (min-width: 576px) {
   .map-container {
-    min-height: 65vh; }
+    max-height: 65vh; }
     .map-container .marker .logo {
       width: 60px; } }
 
 @media screen and (min-width: 768px) {
   .map-container {
-    min-height: 70vh; }
+    max-height: 70vh; }
     .map-container .marker .logo {
       width: 60px; } }
 
 @media screen and (min-width: 992px) {
   .map-container {
-    min-height: 100vh; }
+    max-height: 100vh; }
     .map-container .marker .logo {
       width: 60px; } }
 
