@@ -3,11 +3,63 @@
   width: 100%;
   position: relative;
 
+  .marker {
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    .logo {
+      cursor: pointer;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
   .info-window {
-    margin: 20px 0 20px 20px;
+    padding: 10px 15px;
+    background-color: $white;
+    min-width: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 2;
+    cursor: initial;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -8px;
+      border: 8px solid transparent;
+      border-top-color: #ffffff;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.7);
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    .address {
+      margin-bottom: 15px;
+    }
 
     .contacts {
-      margin-top: 20px;
+      margin-top: 15px;
 
       > p {
         margin-bottom: 10px;
@@ -21,6 +73,12 @@
 
   .map-container {
     min-height: 65vh;
+
+    .marker {
+      .logo {
+        width: 60px;
+      }
+    }
   }
 }
 
@@ -29,6 +87,12 @@
 
   .map-container {
     min-height: 65vh;
+
+    .marker {
+      .logo {
+        width: 60px;
+      }
+    }
   }
 }
 
@@ -36,6 +100,12 @@
   // Tablet
   .map-container {
     min-height: 70vh;
+
+    .marker {
+      .logo {
+        width: 60px;
+      }
+    }
   }
 }
 
@@ -43,5 +113,11 @@
   // Desktop
   .map-container {
     min-height: 100vh;
+
+    .marker {
+      .logo {
+        width: 60px;
+      }
+    }
   }
 }

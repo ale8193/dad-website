@@ -1,6 +1,6 @@
 import React from 'react';
-import Map from '../tools/Maps/MapContainer';
 import { getPlaceInfo, getOpeningTimes } from "../../model/place";
+import {MapContainer} from "../tools/Maps/MapContainer";
 
 export default function WhereBanner() {
     const placeInfo = getPlaceInfo().placeInfo;
@@ -31,18 +31,7 @@ export default function WhereBanner() {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 col-md-12 col-lg-9">
-                                {/*<Map />*/}
-                                <div style={{
-                                    width: '100%',
-                                    height: '100vh',
-                                    backgroundColor: '#e3e3e3',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                                >
-                                    <h3>Map Here</h3>
-                                </div>
+                              <MapContainer/>
                             </div>
                             <div className="col-12 col-md-12 col-lg-3">
                                 <div className="content text-white">

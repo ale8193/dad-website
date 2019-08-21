@@ -9599,28 +9599,74 @@ body {
 .map-container {
   width: 100%;
   position: relative; }
+  .map-container .marker {
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: inline-block;
+    z-index: 1; }
+    .map-container .marker .logo {
+      cursor: pointer;
+      opacity: 0.8; }
+      .map-container .marker .logo:hover {
+        opacity: 1; }
   .map-container .info-window {
-    margin: 20px 0 20px 20px; }
+    padding: 10px 15px;
+    background-color: #fff;
+    min-width: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 2;
+    cursor: initial; }
+    .map-container .info-window:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -8px;
+      border: 8px solid transparent;
+      border-top-color: #ffffff; }
+    .map-container .info-window .close-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.7); }
+      .map-container .info-window .close-icon:hover {
+        color: #000; }
+    .map-container .info-window .address {
+      margin-bottom: 15px; }
     .map-container .info-window .contacts {
-      margin-top: 20px; }
+      margin-top: 15px; }
       .map-container .info-window .contacts > p {
         margin-bottom: 10px; }
 
 @media screen and (min-width: 0) {
   .map-container {
-    min-height: 65vh; } }
+    min-height: 65vh; }
+    .map-container .marker .logo {
+      width: 60px; } }
 
 @media screen and (min-width: 576px) {
   .map-container {
-    min-height: 65vh; } }
+    min-height: 65vh; }
+    .map-container .marker .logo {
+      width: 60px; } }
 
 @media screen and (min-width: 768px) {
   .map-container {
-    min-height: 70vh; } }
+    min-height: 70vh; }
+    .map-container .marker .logo {
+      width: 60px; } }
 
 @media screen and (min-width: 992px) {
   .map-container {
-    min-height: 100vh; } }
+    min-height: 100vh; }
+    .map-container .marker .logo {
+      width: 60px; } }
 
 .custom-navbar {
   overflow: hidden;
