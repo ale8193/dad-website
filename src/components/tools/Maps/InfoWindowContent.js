@@ -1,11 +1,10 @@
 import React from 'react';
 
 export default function InfoWindowContent(props) {
-    const { placeInfo, closeCallback } = props;
+    const { placeInfo } = props;
     return (
         <div className="info-window">
             <h4 className="title text-primary text-uppercase d-inline-block">{placeInfo.title}</h4>
-            <i className="fas fa-times close-icon" onClick={closeCallback} />
             <div className="info-wrapper">
                 <p className="address">
                     {placeInfo.address}

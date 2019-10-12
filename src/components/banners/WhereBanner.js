@@ -1,9 +1,8 @@
 import React from 'react';
-import { getPlace, getPlaceInfo, getOpeningTimes } from "../../model/place";
-import {MapContainer} from "../tools/Maps/MapContainer";
+import { getPlaceInfo, getOpeningTimes } from "../../model/place";
+import MapContainer from "../tools/Maps/MapContainer";
 
 export default function WhereBanner() {
-    const place = getPlace().place;
     const placeInfo = getPlaceInfo().placeInfo;
     const openingTimes = getOpeningTimes().openingTimes;
 
@@ -32,9 +31,7 @@ export default function WhereBanner() {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 col-md-12 col-lg-9">
-                              <MapContainer
-                                place={place}
-                              />
+                              <MapContainer />
                             </div>
                             <div className="col-12 col-md-12 col-lg-3">
                                 <div className="content text-white">

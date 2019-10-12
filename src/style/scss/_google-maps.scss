@@ -21,39 +21,6 @@
   }
 
   .info-window {
-    padding: 10px 15px;
-    background-color: $white;
-    min-width: 300px;
-    width: 100%;
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    margin-left: -150px;
-    z-index: 2;
-    cursor: initial;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -8px;
-      border: 8px solid transparent;
-      border-top-color: #ffffff;
-    }
-
-    .close-icon {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      color: rgba(0, 0, 0, 0.7);
-
-      &:hover {
-        color: #000;
-      }
-    }
 
     .address {
       margin-bottom: 15px;
@@ -74,6 +41,7 @@
 
   .map-container {
     max-height: 65vh;
+    min-height: 65vh;
 
     .marker {
       .logo {
@@ -88,6 +56,7 @@
 
   .map-container {
     max-height: 65vh;
+    min-height: 65vh;
 
     .marker {
       .logo {
@@ -101,6 +70,7 @@
   // Tablet
   .map-container {
     max-height: 70vh;
+    min-height: 70vh;
 
     .marker {
       .logo {
@@ -113,7 +83,8 @@
 @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
   // Desktop
   .map-container {
-    max-height: 100vh;
+    max-height: 96vh;
+    min-height: 90vh;
 
     .marker {
       .logo {
